@@ -111,36 +111,39 @@
              <label for="inputdefault" class="login-font">Password*</label>
              <p id="errorPassword" class="errTxt"></p>
              <input class="form-control" id="pwd" type="password"><br><br>
-             <input type="submit" id="login" class="btn btn-success btn-lg button-layout" value="Log In ">
+             <button type="button" id="login" class="btn btn-success btn-lg button-layout">Log In </button>
              <button type="button" id ="signIn" class="btn btn-primary btn-lg button-layout">Sign Up</button>
          </div>
         </form>
         <script>
-        function validateForm() {
-              console.log(document.getElementById("userId").value);
-                document.getElementById("errorUserName").innerHTML = " ";
+        // function validateForm() {
+        //       console.log(document.getElementById("userId").value);
+        //         
+        //      };
+        </script>
+         
+       
+        
+        <script type="text/javascript">
+               document.getElementById("login").onclick = function () {
+                  document.getElementById("errorUserName").innerHTML = " ";
                 document.getElementById("errorPassword").innerHTML = " ";
               if(document.getElementById("userId").value == "") {
                 document.getElementById("errorUserName").innerHTML = "Enter Username";
-                return false;
               }
               else if(document.getElementById("pwd").value == "") {
                   document.getElementById("errorPassword").innerHTML = "Enter password";
-                  return false;
               }
 
               else if(document.getElementById("pwd").value == "admin" && document.getElementById("pwd").value == "admin") {
                 console.log("entering loop");
-                   location.href = "quiz.html"
-                    return true;
+                  location.href = "quiz.html";
               }
               else {
-                location.href = "quiz.html"
-                return true;
+                location.href = "quiz.html";
               }
              };
-        </script>
-        <script type="text/javascript">
+             
               document.getElementById("signIn").onclick = function () {
                location.href = "signup.html";
              };
