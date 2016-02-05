@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -26,14 +27,51 @@
 				<h1 class="title-super text-thin">Altimetrik Quiz</h1>
 				<h4>Did you know?</h4>
 			</div>
-		</div>
+		</div><hr><br><br>
 		<div class="row"> 
 			<div class="col-mod-12">
-				<h2 align="center"> Questions</h2>
+				<h2 align="center"> Questions</h2><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-mod-12">
+				<div class="question-style">
+					<p>1. What is your name?</p>
+				</div>
+				<div class="div-options">
+					<input type="radio" name="radio" id="radio1" class="radio" checked/>
+					<label class="label-options" for="radio1">Don't know</label>
+				</div>
+
+				<div class="div-options">
+					<input type="radio" name="radio" id="radio2" class="radio"/>
+					<label class="label-options" for="radio2">Question pass</label>
+				</div>
+
+				<div class="div-options">	
+					<input type="radio" name="radio" id="radio3" class="radio"/>
+					<label class="label-options" for="radio3">Third Option</label>
+				</div>
+
+				<div class="div-options">	
+					<input type="radio" name="radio" id="radio4" class="radio"/>
+					<label class="label-options" for="radio4">None</label>
+				</div><br>
+				<hr>
 			</div>
 		</div>
 		
 	</div>
-
+	<script>
+		function printQns() {
+   		 var text = "";
+   		 var i;
+   		 for (i = 0; i < 5; i++) {
+      		  text += "The number is " + i + "<br>";
+      		 document.getElementById("demo").innerHTML = text;
+    	}
+   
+}
+</script>
 </body>
 </html>
