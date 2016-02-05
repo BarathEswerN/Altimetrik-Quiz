@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset = "utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+	<script src="js/jquery.plugin.js"></script>
+	<script src="js/jquery.imagecube.js"></script>
+	<script>
+		$(function () {
+		$('#basicCube').imagecube();
+		});
+	</script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				 <div id="basicCube">
+					<img src="images/face1.png" alt="logo" title="logo1">
+					<img src="images/face2.jpg" alt="logo" title="logo2">
+					<img src="images/face3.jpg" alt="logo" title="logo3">
+					<img src="images/face4.jpg" alt="logo" title="logo4">
+				</div>
+			</div>
+			<div class="col-md-6 text-right text-uppercase">
+				<h1 class="title-super text-thin">Altimetrik Quiz</h1>
+				<h4>Did you know?</h4>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<form>
+					<h3 align="center" class="login-font"> Sign up for Quiz</h3>
+				    <label for="inputdefault" class="login-font button-layout">User Name*</label>
+					<input class="form-control button-layout" id="ex3" type="text"><br>
+					<label for="inputdefault" class="login-font button-layout">Employee ID*</label>
+					<input class="form-control button-layout" id="ex3" type="text"><br>
+					<label for="inputdefault" class="login-font button-layout">Password*</label>
+					<input class="form-control button-layout" id="ex3" type="password"><br>
+					<label for="inputdefault" class="login-font button-layout">Confirm Password*</label>
+					<input class="form-control button-layout" id="ex3" type="text"><br>
+					<button type="button" id="signUp" class="btn btn-primary btn-lg button-layout">Sign Up</button><br><br>
+					<script type="text/javascript">
+            			  document.getElementById("signUp").onclick = function () {
+              			 location.href = "success.html";
+            			 };
+            		 </script>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
