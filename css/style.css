@@ -71,17 +71,19 @@ body {
   margin-left: 50px;
   margin-top: 20px;
 }
-
 .label-options {
   width: 200px;
+  margin-left: 50px;
+  margin-top: 20px;
   border-radius: 3px;
   border: 1px solid #D1D3D4;
+  color: #333333;
 
 }
 
 /* hide input */
 input.radio:empty {
-  margin-left: -999px;
+  margin-left: -9999px;
 }
 
 /* style label */
