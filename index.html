@@ -135,15 +135,15 @@
                   document.getElementById("errorPassword").innerHTML = "Enter password";
               }
 
-              else if(document.getElementById("pwd").value == "admin" && document.getElementById("pwd").value == "admin") {
+              else if(document.getElementById("userId").value == "admin" && document.getElementById("pwd").value == "admin") {
                 console.log("entering loop");
                   location.href = "quiz.html";
               }
               else {
-                location.href = "quiz.html";
+                document.getElementById("errorUserName").innerHTML = "Invalid Username Password";
               }
              };
-             
+
               document.getElementById("signIn").onclick = function () {
                location.href = "signup.html";
              };

@@ -46,19 +46,48 @@
 				<form>
 					<h3 align="center" class="login-font"> Sign up for Quiz</h3>
 				    <label for="inputdefault" class="login-font button-layout">User Name*</label>
-					<input class="form-control button-layout" id="ex3" type="text"><br>
+				    <p id="errorUserName" class="login-font button-layout errTxt"></p>
+					<input class="form-control button-layout" id="userId" type="text"><br>
 					<label for="inputdefault" class="login-font button-layout">Employee ID*</label>
-					<input class="form-control button-layout" id="ex3" type="text"><br>
+					<p id="empID" class="login-font button-layout errTxt"></p>
+					<input class="form-control button-layout" id="empId" type="text"><br>
 					<label for="inputdefault" class="login-font button-layout">Password*</label>
-					<input class="form-control button-layout" id="ex3" type="password"><br>
+					<p id="errorPassword" class="login-font button-layout errTxt"></p>
+					<input class="form-control button-layout" id="pwd" type="password"><br>
 					<label for="inputdefault" class="login-font button-layout">Confirm Password*</label>
-					<input class="form-control button-layout" id="ex3" type="text"><br>
+					<p id="errorCnfrmPassword" class="login-font button-layout errTxt"></p>
+					<input class="form-control button-layout" id="cpwd" type="password"><br>
 					<button type="button" id="signUp" class="btn btn-primary btn-lg button-layout">Sign Up</button><br><br>
 					<script type="text/javascript">
-            			  document.getElementById("signUp").onclick = function () {
-              			 location.href = "success.html";
-            			 };
-            		 </script>
+		            	document.getElementById("signUp").onclick = function () {
+		            	document.getElementById("errorUserName").innerHTML = " ";
+		                document.getElementById("empID").innerHTML = " ";
+		                document.getElementById("errorPassword").innerHTML = " ";
+		                document.getElementById("errorCnfrmPassword").innerHTML = " ";
+
+		              if(document.getElementById("userId").value == "") {
+		                document.getElementById("errorUserName").innerHTML = "Enter Username";
+		              }
+		              else if(document.getElementById("empId").value == "") {
+		                  document.getElementById("errorEmpId").innerHTML = "Enter password";
+		              }
+		              else if(document.getElementById("pwd").value == "") {
+		                  document.getElementById("errorPassword").innerHTML = "Enter password";
+		              }
+		              else if(document.getElementById("cpwd").value == "") {
+		                  document.getElementById("errorCnfrmPassword").innerHTML = "Enter confirm password";
+		              }
+
+		               else if(document.getElementById("pwd").value != document.getElementById("cpwd").value) {
+		                   document.getElementById("errorPassword").innerHTML = "Password and confirm password mismatch";
+		              }
+
+		              else {
+		                   location.href = "success.html";
+		              }
+		              			
+		            };
+             </script>
 				</form>
 			</div>
 		</div>
