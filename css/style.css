@@ -48,7 +48,11 @@ body {
  	margin-left: 20px; 
  	width: 45%;
  }
-
+.submit-button {
+  margin-top: 40px; 
+  margin-left: 35%; 
+  width: 35%;
+}
  #basicCube {
   margin-top: 20px; 
   margin-left: 20px; 
@@ -138,4 +142,7 @@ input.radio:checked ~ label {
 /* radio focus */
 input.radio:focus ~ label:before {
   box-shadow: 0 0 0 3px #999;
+}
+.gauge-prop {
+  overflow: ;
 }
