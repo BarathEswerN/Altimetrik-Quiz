@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+     <meta name="viewport" content="width=1024, maximum-scale=1">
+    <link  rel="stylesheet" href="css/jquery-gauge.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style>
+        .demo1 {
+            position: relative;
+            margin-left:10vw;
+            margin-top: 5vw;
+            width: 25vw;
+            height: 25vw;
+            box-sizing: border-box;
+            float:center;
+            
+        }
+        
+        .imgKey {
+            margin-left:5vw;
+            margin-top: 10vw;
+            float:left;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="title-logo" src="images/logo.png" alt="My logo">
+            </div>
+            <div class="col-md-6 text-right text-uppercase">
+                <h1 class="title-super text-thin">Altimetrik Quiz</h1>
+                <h4>Did you know?</h4>
+            </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-md-12 gauge-prop">
+                <h2 align="center">Thank you for taking the quiz.</h2>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="col-md-6">
+                <div class="gauge1 demo1"></div>
+            </div>
+             <div class="col-md-6">
+                <img class="img-responsive imgKey" src="images/scoreKey.png" alt="score key">
+            </div>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-gauge.min.js"></script>
+    <script>
+        var gauge = new Gauge($('.gauge1'), {value: 60});
+    </script>
+    </div>
+</body>
+</html>
+

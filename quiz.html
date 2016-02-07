@@ -5,7 +5,7 @@
 	<meta charset = "utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Portfolio</title>
+	<title>Quiz-Altimetrik</title>
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -35,12 +35,14 @@
 		</div>
 		<div class="row">
 			<div class="col-mod-12">
-				<div>
-					
+				<div>	
 					<p class="panel-title question-style">
-          				<a data-toggle="collapse" href="#collapse1">1. What is your name?</a>
+          				<a data-toggle="collapse" href="#collapse1">
+          					<p id="questions" class="panel-title question-style">1. What is your name?</p>
+          				</a>
         			</p>
 				</div>
+
 			</div>
 		</div>
 
@@ -48,13 +50,13 @@
 			<div class="row">
 				<div class="option-height col-md-6">
 					<div class=" div-options">
-						<input type="radio" name="radio" id="radio1" class="radio" />
+						<input type="radio" name="radio1" id="radio1" class="radio" />
 						<label class="label-options" for="radio1">Don't know</label>
 					</div>
 				</div>
 				<div class="option-height col-md-6">
 					<div class=" div-options">
-						<input type="radio" name="radio" id="radio2" class="radio" hidden/>
+						<input type="radio" name="radio1" id="radio2" class="radio" hidden/>
 						<label class="label-options" for="radio2">Question pass</label>
 					</div>
 				</div>
@@ -62,28 +64,129 @@
 			<div class="row">
 				<div class="option-height col-md-6">	
 					<div class=" div-options">
-						<input type="radio" name="radio" id="radio3" class="radio" />
+						<input type="radio" name="radio1" id="radio3" class="radio" />
 						<label class="label-options" for="radio3">Third Option</label>
 					</div>
 				</div>
 				<div class="option-height col-md-6">	
 					<div class=" div-options">
-						<input type="radio" name="radio" id="radio4" class="radio" hidden/>
+						<input type="radio" name="radio1" id="radio4" class="radio" hidden/>
 						<label class="label-options" for="radio4">None</label>
 					</div>
 				</div>
 			</div>
 		</div>
-	<script>
-		function printQns() {
-   		 var text = "";
-   		 var i;
-   		 for (i = 0; i < 5; i++) {
-      		  text += "The number is " + i + "<br>";
-      		 document.getElementById("demo").innerHTML = text;
-    	}
-   
-}
-</script>
+		
+		<div class="row">
+			<div class="col-mod-12">
+				<div>	
+					<p class="panel-title question-style">
+          				<a data-toggle="collapse" href="#collapse2">
+          					<p id="questions" class="panel-title question-style">2. What are your hobbies?</p>
+          				</a>
+        			</p>
+				</div>
+			</div>
+		</div>
+		<div id="collapse2" class="panel-collapse collapse">
+			<div class="row">
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio2" id="radio1" class="radio" />
+						<label class="label-options" for="radio1">Don't know</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio2" id="radio2" class="radio" hidden/>
+						<label class="label-options" for="radio2">Question pass</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio2" id="radio3" class="radio" />
+						<label class="label-options" for="radio3">Third Option</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio2" id="radio4" class="radio" hidden/>
+						<label class="label-options" for="radio4">None</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-mod-12">
+				<div>	
+					<p class="panel-title question-style">
+          				<a data-toggle="collapse" href="#collapse3">
+          					<p id="questions" class="panel-title question-style">3. What is your favourite sport?</p>
+          				</a>
+        			</p>
+				</div>
+			</div>
+		</div>
+		<div id="collapse3" class="panel-collapse collapse">
+			<div class="row">
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio3" id="radio1" class="radio" />
+						<label class="label-options" for="radio1">Don't know</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio3" id="radio2" class="radio" hidden/>
+						<label class="label-options" for="radio2">Question pass</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio3" id="radio3" class="radio" />
+						<label class="label-options" for="radio3">Third Option</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio3" id="radio4" class="radio" hidden/>
+						<label class="label-options" for="radio4">None</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<br><br>
+				 <button type="button" id ="submit" class="btn btn-primary btn-lg submit-button" data-toggle="modal" data-target="#submitAnswers">Submit</button>
+			</div>
+		</div><br><br>
+		</div>
+			<!-- Modal -->
+<div class="modal fade" id="submitAnswers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Do you want to submit?</h4>
+      </div>
+      <div class="modal-body">
+		Answers once submitted can not be changed.
+		</div>
+      <div class="modal-footer">
+        <button type="button" id="modalSubmit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <script type="text/javascript">
+               document.getElementById("modalSubmit").onclick = function () {
+               	location.href = "result.html";
+               }
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
