@@ -83,6 +83,16 @@
 		              }
 
 		              else {
+							var myAssociativeArr = {
+								credentials: []
+							};
+							var userId = {};
+							var pwd = {};
+						     myAssociativeArr.credentials.push({
+							     "userId": document.getElementById("userId") ,
+							     "pwd": document.getElementById("pwd")
+							    });
+						     console.log(myAssociativeArr.credentials);
 		                   location.href = "success.html";
 		              }
 		              			
