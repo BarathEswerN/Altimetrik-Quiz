@@ -49,7 +49,7 @@
 				    <p id="errorUserName" class="login-font button-layout errTxt"></p>
 					<input class="form-control button-layout" id="userId" type="text"><br>
 					<label for="inputdefault" class="login-font button-layout">Employee ID*</label>
-					<p id="empID" class="login-font button-layout errTxt"></p>
+					<p id="errorEmpId" class="login-font button-layout errTxt"></p>
 					<input class="form-control button-layout" id="empId" type="text"><br>
 					<label for="inputdefault" class="login-font button-layout">Password*</label>
 					<p id="errorPassword" class="login-font button-layout errTxt"></p>
@@ -61,7 +61,7 @@
 					<script type="text/javascript">
 		            	document.getElementById("signUp").onclick = function () {
 		            	document.getElementById("errorUserName").innerHTML = " ";
-		                document.getElementById("empID").innerHTML = " ";
+		                document.getElementById("errorEmpId").innerHTML = " ";
 		                document.getElementById("errorPassword").innerHTML = " ";
 		                document.getElementById("errorCnfrmPassword").innerHTML = " ";
 
@@ -69,7 +69,7 @@
 		                document.getElementById("errorUserName").innerHTML = "Enter Username";
 		              }
 		              else if(document.getElementById("empId").value == "") {
-		                  document.getElementById("errorEmpId").innerHTML = "Enter password";
+		                  document.getElementById("errorEmpId").innerHTML = "Enter employee ID";
 		              }
 		              else if(document.getElementById("pwd").value == "") {
 		                  document.getElementById("errorPassword").innerHTML = "Enter password";
