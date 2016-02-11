@@ -83,16 +83,10 @@
 		              }
 
 		              else {
-							var myAssociativeArr = {
-								credentials: []
-							};
-							var userId = {};
-							var pwd = {};
-						     myAssociativeArr.credentials.push({
-							     "userId": document.getElementById("userId") ,
-							     "pwd": document.getElementById("pwd")
-							    });
-						     console.log(myAssociativeArr.credentials);
+
+						   localStorage.setItem("lUserName", document.getElementById("userId").value);
+						   localStorage.setItem("lPassword", document.getElementById("pwd").value);
+
 		                   location.href = "success.html";
 		              }
 		              			

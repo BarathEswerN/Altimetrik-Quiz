@@ -116,22 +116,37 @@
          </div>
         </form>
         <script type="text/javascript">
-               document.getElementById("login").onclick = function () {
-                  document.getElementById("errorUserName").innerHTML = " ";
+              var luserIdArray = [];
+              luserIdArray.push(localStorage.getItem("lUserName"));
+              var lPasswordArray = [];
+              lPasswordArray.push(localStorage.getItem("lPassword"));
+              console.log(luserIdArray);
+              console.log(lPasswordArray);
+              document.getElementById("login").onclick = function () {
+                document.getElementById("errorUserName").innerHTML = " ";
                 document.getElementById("errorPassword").innerHTML = " ";
               if(document.getElementById("userId").value == "") {
                 document.getElementById("errorUserName").innerHTML = "Enter Username";
               }
               else if(document.getElementById("pwd").value == "") {
-                  document.getElementById("errorPassword").innerHTML = "Enter password";
+                document.getElementById("errorPassword").innerHTML = "Enter password";
               }
 
               else if(document.getElementById("userId").value == "admin" && document.getElementById("pwd").value == "admin") {
                 console.log("entering loop");
                   location.href = "quiz.html";
               }
+
               else {
-                document.getElementById("errorUserName").innerHTML = "Invalid Username Password";
+                for (var i = 0; i<luserIdArray.length; i++) {
+                  if (document.getElementById("userId").value == luserIdArray[i] && document.getElementById("pwd").value == lPasswordArray[i]) {
+                    location.href = "quiz.html";
+                  }
+                  else {
+                    document.getElementById("errorUserName").innerHTML = "Invalid Username Password";
+                  }
+                }
+                
               }
              };
 
