@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/resultValue.js"></script>
+
     <style>
         .demo1 {
             position: relative;
@@ -59,7 +61,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-gauge.min.js"></script>
     <script>
-        var gauge = new Gauge($('.gauge1'), {value: 80});
+    
+   
+        console.log(localStorage.getItem("res"));
+
+        var gauge = new Gauge($('.gauge1'), {value: localStorage.getItem("res")});
     </script>
     </div>
 </body>

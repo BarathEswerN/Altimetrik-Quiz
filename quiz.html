@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-1.12.0.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/resultValue.js"></script>
 </head>
 <body>
 
@@ -49,7 +50,7 @@
 			<div class="row">
 				<div class="option-height col-md-6">
 					<div class=" div-options">
-						<input type="radio" name="radio1" id="radio11" value="1a" class="radio" />
+						<input type="radio" name="radio1" id="radio11" value="a" class="radio" />
 						<label class="label-options" for="radio11">Don't know</label>
 					</div>
 				</div>
@@ -91,7 +92,7 @@
 			<div class="row">
 				<div class="option-height col-md-6">
 					<div class=" div-options">
-						<input type="radio" name="radio2" id="radio21" value="2a"class="radio" />
+						<input type="radio" name="radio2" id="radio21" value="a"class="radio" />
 						<label class="label-options" for="radio21">Don't know</label>
 					</div>
 				</div>
@@ -132,7 +133,7 @@
 			<div class="row">
 				<div class="option-height col-md-6">
 					<div class=" div-options">
-						<input type="radio" name="radio3" id="radio31" value="3a" class="radio" />
+						<input type="radio" name="radio3" id="radio31" value="a" class="radio" />
 						<label class="label-options" for="radio31">Don't know</label>
 					</div>
 				</div>
@@ -179,7 +180,26 @@
         <button type="button" id="modalSubmit" class="btn btn-primary" data-dismiss="modal">Submit</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
         <script type="text/javascript">
+       
+        </script>
+        <script type="text/javascript">
                document.getElementById("modalSubmit").onclick = function () {
+               	 var count = 0;
+        		 var crt = "a";
+        		 var param = "";
+        		 var radioId = ["radio11", "radio12", "radio13", "radio14", "radio21", "radio22", "radio23", "radio24", "radio31", "radio32", "radio33", "radio34"];
+        		 for (i = 0; i < radioId.length; i++) { 
+        			console.log(document.getElementById(radioId[i].value));
+        			if(document.getElementById(radioId[i]).checked == true && document.getElementById(radioId[i]).value == crt) {
+        				console.log(document.getElementById(radioId[i]).value);
+
+        				count++;
+        			}
+        		}
+        		var score=new Score();
+        		score.setValue(count);
+        		localStorage.setItem("res",score.getValue());
+        		console.log(score.getValue());
                	location.href = "result.html";
                }
         </script>
