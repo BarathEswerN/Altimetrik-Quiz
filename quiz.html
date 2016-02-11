@@ -160,6 +160,92 @@
 			</div>
 		</div> 
 		<div class="row">
+			<div class="col-mod-12">
+				<div>	
+					<p class="panel-title question-style">
+          				<a data-toggle="collapse" href="#collapse4">
+          					<p id="questions" class="panel-title question-style">4. What is your name?</p>
+          				</a>
+        			</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="collapse4" class="panel-collapse collapse">
+			<div class="row">
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio4" id="radio41" value="a" class="radio" />
+						<label class="label-options" for="radio41">Don't know</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio4" id="radio42" value="1b" class="radio" />
+						<label class="label-options" for="radio42">Question pass</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio4" id="radio43" value="1c" class="radio" />
+						<label class="label-options" for="radio43">Third Option</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio4" id="radio44" value="1d" class="radio" />
+						<label class="label-options" for="radio44">None</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-mod-12">
+				<div>	
+					<p class="panel-title question-style">
+          				<a data-toggle="collapse" href="#collapse5">
+          					<p id="questions" class="panel-title question-style">5. What is your name?</p>
+          				</a>
+        			</p>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="collapse5" class="panel-collapse collapse">
+			<div class="row">
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio5" id="radio51" value="a" class="radio" />
+						<label class="label-options" for="radio51">Don't know</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">
+					<div class=" div-options">
+						<input type="radio" name="radio5" id="radio52" value="1b" class="radio" />
+						<label class="label-options" for="radio52">Question pass</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio5" id="radio53" value="1c" class="radio" />
+						<label class="label-options" for="radio53">Third Option</label>
+					</div>
+				</div>
+				<div class="option-height col-md-6">	
+					<div class=" div-options">
+						<input type="radio" name="radio5" id="radio54" value="1d" class="radio" />
+						<label class="label-options" for="radio54">None</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-12">
 				<br><br>
 				 <button type="button" id ="submit" class="btn btn-primary btn-lg submit-button" data-toggle="modal" data-target="#submitAnswers">Submit</button>
@@ -187,13 +273,18 @@
                	 var count = 0;
         		 var crt = "a";
         		 var param = "";
-        		 var radioId = ["radio11", "radio12", "radio13", "radio14", "radio21", "radio22", "radio23", "radio24", "radio31", "radio32", "radio33", "radio34"];
+        		 var radioId = ["radio11", "radio12", "radio13", "radio14", "radio21", "radio22", "radio23", "radio24", "radio31", "radio32", "radio33", "radio34", "radio41", "radio42", "radio43", "radio44", "radio51", "radio52", "radio53", "radio54",];
+        		 console.log("radio0");
+        		 console.log(document.getElementById(radioId[0]).value);
         		 for (i = 0; i < radioId.length; i++) { 
-        			console.log(document.getElementById(radioId[i].value));
+        			
         			if(document.getElementById(radioId[i]).checked == true && document.getElementById(radioId[i]).value == crt) {
-        				console.log(document.getElementById(radioId[i]).value);
 
+        				console.log(i);
+        				console.log(document.getElementById(radioId[i]).value);
         				count++;
+        				console.log("count value");
+        				console.log(count);
         			}
         		}
         		var score=new Score();

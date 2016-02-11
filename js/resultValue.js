@@ -11,7 +11,7 @@ function Score()
 {
  var mark ;
 this.setValue=function(count) {
-	mark = count*10;
+	mark = count*20;
 	console.log("set value js function");
 	console.log(mark);
 };
