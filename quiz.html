@@ -207,7 +207,7 @@
 				<div>	
 					<p class="panel-title question-style">
           				<a data-toggle="collapse" href="#collapse5">
-          					<p id="questions" class="panel-title question-style">5. What is information visualization</p>
+          					<p id="questions" class="panel-title question-style">5. What is information visualization?</p>
           				</a>
         			</p>
 				</div>
@@ -274,23 +274,15 @@
         		 var crt = "a";
         		 var param = "";
         		 var radioId = ["radio11", "radio12", "radio13", "radio14", "radio21", "radio22", "radio23", "radio24", "radio31", "radio32", "radio33", "radio34", "radio41", "radio42", "radio43", "radio44", "radio51", "radio52", "radio53", "radio54",];
-        		 console.log("radio0");
-        		 console.log(document.getElementById(radioId[0]).value);
         		 for (i = 0; i < radioId.length; i++) { 
         			
         			if(document.getElementById(radioId[i]).checked == true && document.getElementById(radioId[i]).value == crt) {
-
-        				console.log(i);
-        				console.log(document.getElementById(radioId[i]).value);
         				count++;
-        				console.log("count value");
-        				console.log(count);
         			}
         		}
         		var score=new Score();
         		score.setValue(count);
         		localStorage.setItem("res",score.getValue());
-        		console.log(score.getValue());
                	location.href = "result.html";
                }
         </script>
