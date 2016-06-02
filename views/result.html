@@ -6,12 +6,12 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
      <meta name="viewport" content="width=1024, maximum-scale=1">
-    <link  rel="stylesheet" href="css/jquery-gauge.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/resultValue.js"></script>
+    <link  rel="stylesheet" href="../css/jquery-gauge.css" type="text/css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/resultValue.js"></script>
 
     <style>
         .demo1 {
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img class="title-logo" src="images/logo.png" alt="My logo">
+                <img class="title-logo" src="../images/logo.png" alt="My logo">
             </div>
             <div class="col-md-6 text-right text-uppercase">
                 <h1 class="title-super text-thin">Altimetrik Quiz</h1>
@@ -55,11 +55,11 @@
                 <div class="gauge1 demo1"></div>
             </div>
              <div class="col-md-6">
-                <img class="img-responsive imgKey" src="images/scoreKey.png" alt="score key">
+                <img class="img-responsive imgKey" src="../images/scoreKey.png" alt="score key">
             </div>
         </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-gauge.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-gauge.min.js"></script>
     <script>
         var gauge = new Gauge($('.gauge1'), {value: localStorage.getItem("res")});
     </script>

@@ -136,13 +136,13 @@
 
               else if(document.getElementById("userId").value == "admin" && document.getElementById("pwd").value == "admin") {
                 console.log("entering loop");
-                  location.href = "quiz.html";
+                  location.href = "views/quiz.html";
               }
 
               else {
                 for (var i = 0; i<luserIdArray.length; i++) {
                   if (document.getElementById("userId").value == luserIdArray[i] && document.getElementById("pwd").value == lPasswordArray[i]) {
-                    location.href = "quiz.html";
+                    location.href = "views/quiz.html";
                   }
                   else {
                     document.getElementById("errorUserName").innerHTML = "Invalid Username Password";
