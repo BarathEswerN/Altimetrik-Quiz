@@ -46,38 +46,37 @@
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
-      <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="images/Gartner-Banner.jpg" alt="Chania" width="100%" height="345">
+        <img src="" id="1" class="banner-img" alt="Chania" width="100%" height="345">
         <div class="carousel-caption">
           <h3>Gartner Award</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <p></p>
         </div>
       </div>
 
       <div class="item">
-        <img src="images/BI-Make_mobile.jpg" alt="Chania" width="100%" height="345">
+        <img src="" id="2" alt="Chania" width="100%" height="345" class="banner-img">
         <div class="carousel-caption">
           <h3>Mobile Solutions</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+          <p></p>
         </div>
       </div>
     
       <div class="item">
-        <img src="images/L1-Capabilities.jpg" alt="Flower" width="100%" height="345">
+        <img src="" id="3" alt="Flower" width="100%" height="345" class="banner-img">
         <div class="carousel-caption">
           <h3>Capabilities</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <p></p>
         </div>
       </div>
 
       <div class="item">
-        <img src="images/altimetrik-slide3.jpg" alt="altimetrik" width="100%" height="345">
+        <img src="" id="4" alt="altimetrik" width="100%" height="345" class="banner-img">
         <div class="carousel-caption">
           <h3>(Re)-Imagine</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
+          <p></p>
         </div>
       </div>
   
@@ -136,13 +135,13 @@
 
               else if(document.getElementById("userId").value == "admin" && document.getElementById("pwd").value == "admin") {
                 console.log("entering loop");
-                  location.href = "views/quiz.html";
+                  location.href = "quiz.html";
               }
 
               else {
                 for (var i = 0; i<luserIdArray.length; i++) {
                   if (document.getElementById("userId").value == luserIdArray[i] && document.getElementById("pwd").value == lPasswordArray[i]) {
-                    location.href = "views/quiz.html";
+                    location.href = "quiz.html";
                   }
                   else {
                     document.getElementById("errorUserName").innerHTML = "Invalid Username Password";
